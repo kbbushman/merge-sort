@@ -1,4 +1,7 @@
 function mergeSort(arr) {
+  if (arr.constructor !== Array) { // ensure the argument passed in is an array
+    return "please pass in an array instead";
+  }
   // exit condition
   if (arr.length <= 1) { // nothing to be sorted
     return arr;
