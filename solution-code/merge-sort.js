@@ -20,11 +20,6 @@ function merge(left, right) {
       result.push(right.shift());
     }
   }
-  while (left.length) { // if left is the only array with elements, push them all in
-    result.push(left.shift());
-  }
-  while (right.length) {  // if right is the only array with elements, push them all in
-    result.push(right.shift());
-  }
-  return result; // return merged array
+  // tack on remaining items in potentially still populated collection
+  return result.concat(left, right);
 }
